@@ -4,4 +4,4 @@ import App from './web/App.vue'
 import GameLoader from "./app/game-loader.ts";
 
 createApp(App).mount('#app')
-GameLoader.game.init();
+GameLoader.game.init().catch(console.error);

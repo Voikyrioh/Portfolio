@@ -1,18 +1,16 @@
-import { Mesh, MeshBasicMaterial, Vector3 } from "three";
-import {Controls} from "./controls.ts";
-import {degToRad} from "three/src/math/MathUtils";
-import {TeapotGeometry} from "three/examples/jsm/geometries/TeapotGeometry";
+import { Mesh, MeshBasicMaterial, SphereGeometry, Vector3, Object3D } from "three";
+import { Controls } from "./controls";
+import { degToRad } from "three/src/math/MathUtils.js";
+import object from '../assets/models/persona.glb?url';
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 
 export class Character {
-    mesh: Mesh;
+    mesh: Object3D;
     controls: Controls;
 
     constructor() {
-        const geometry = new TeapotGeometry( 1)
-        const material = new MeshBasicMaterial( { color: 0x0000ff })
-        this.mesh = new Mesh(geometry, material);
-        this.mesh.position.set(0, 0, 0);
+        this.mesh = new Mesh(new SphereGeometry(1), new MeshBasicMaterial({color: 0xff0000}));
         this.controls = new Controls();
     }
 
@@ -37,5 +35,12 @@ export class Character {
         this.controls.isKeyPressed('s') ? this.move({force: -1} ) : null;
         this.controls.isKeyPressed('q') ? this.move({angle: -1}) : null;
         this.controls.isKeyPressed('d') ? this.move({angle: 1} ) : null;
+    }
+
+    async load() {
+        const loader = new GLTFLoader();
+        const characterModel = await loader.loadAsync(object);
+        this.mesh = characterModel.scene;
+        this.mesh.position.set(0, 0, 0);
     }
 }

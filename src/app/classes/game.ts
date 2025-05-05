@@ -1,6 +1,6 @@
-import {WebGPURenderer} from 'three/webgpu';
-import {Camera, Scene, PerspectiveCamera} from 'three';
-import {Character} from "./character.ts";
+import { WebGPURenderer } from 'three/webgpu';
+import { Camera, Scene, PerspectiveCamera } from 'three';
+import { Character } from "./character";
 
 export class Game {
     #scene: Scene;
@@ -23,11 +23,12 @@ export class Game {
         this.#camera.rotation.set(...oldCamera.rotation.toArray());
     }
 
-    init() {
+    async init() {
+        await this.character.load()
         this.#renderer.setSize( window.innerWidth, window.innerHeight );
         this.#renderer.alpha = true;
         document.body.appendChild( this.#renderer.domElement );
-        this.#camera.position.set( 0, 35, 0);
+        this.#camera.position.set( 10, 10, 10);
         this.#camera.lookAt(this.character.mesh.position);
         this.#scene.add(this.character.mesh);
         this.#renderer.setAnimationLoop( this.render.bind(this) );
