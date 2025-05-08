@@ -1,0 +1,17 @@
+:root {
+    /* === Globals colors === */
+    --text-primary: #ccc;
+    --text-accent: #2C2C2C;
+    --border-primary: #ccc;
+    --border-accent: #fff;
+    --bg-default: #222;
+    --bg-alt: #ccc;
+
+    /* === Status colors === */
+    --error: #ff2536;
+
+    /* === Shorthands === */
+    --border-default: var(--border-primary) 1px solid;
+    --border-default-radius:4px;
+    --transition-default: all 0.2s ease-in-out;
+}

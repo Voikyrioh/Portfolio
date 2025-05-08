@@ -12,7 +12,9 @@ export class Game {
         this.#scene = new Scene();
         this.#camera =  new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         this.character = new Character();
-        this.#renderer = new WebGPURenderer();
+            this.#renderer = new WebGPURenderer({
+                canvas: document.querySelector('#game') as HTMLCanvasElement,
+            });
     }
 
     resetView() {
@@ -28,7 +30,7 @@ export class Game {
         this.#renderer.setSize( window.innerWidth, window.innerHeight );
         this.#renderer.alpha = true;
         document.body.appendChild( this.#renderer.domElement );
-        this.#camera.position.set( 10, 10, 10);
+        this.#camera.position.set( 20, 30, 0);
         this.#camera.lookAt(this.character.mesh.position);
         this.#scene.add(this.character.mesh);
         this.#renderer.setAnimationLoop( this.render.bind(this) );

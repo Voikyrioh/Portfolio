@@ -3,8 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  appType: 'spa',
-  plugins: [vue()],
+  plugins: [],
   assetsInclude: ['**/*.glb'],
-  root: './src/env/production'
+  root: './src/env/gameview'
 })
