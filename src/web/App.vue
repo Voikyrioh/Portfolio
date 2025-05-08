@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import AllComponentsView from "./molecules/all-components-view.vue";
 import "../styles/globals.css"
+import SiteTitle from "./components/site-title.vue";
+import Presentation from "./components/presentation.vue";
 </script>
 
 <template>
-  <AllComponentsView></AllComponentsView>
+  <site-title></site-title>
+  <presentation></presentation>
 </template>
 
 <style scoped>

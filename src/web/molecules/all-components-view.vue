@@ -27,7 +27,7 @@ function onInputError() {
 
 <style scoped>
   .component-view {
-    outline: red solid 1px;
+    outline: var(--border-default);
     margin: 16px auto;
     padding: 16px;
     width: 30%;

@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  assetsInclude: ['**/*.glb'],
-  root: './src/env/webview'
+  assetsInclude: ['**/*.glb', '**/*.json'],
+  root: './src/env/webview',
+  publicDir: 'public'
 })

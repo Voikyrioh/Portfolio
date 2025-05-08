@@ -3,8 +3,8 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  appType: 'spa',
   plugins: [vue()],
-  assetsInclude: ['**/*.glb'],
-  root: './src/env/production'
+  assetsInclude: ['**/*.glb', '**/*.json'],
+  root: './src/env/production',
+  publicDir: 'public'
 })

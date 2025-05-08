@@ -14,4 +14,9 @@
     --border-default: var(--border-primary) 1px solid;
     --border-default-radius:4px;
     --transition-default: all 0.2s ease-in-out;
+
+    /* === Formats === */
+    --desktop-size: 1920px;
+    --tablet-size: 1240px;
+    --telephone-size: 768px;
 }
