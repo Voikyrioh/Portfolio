@@ -2,18 +2,42 @@
   "language": {
     "fr": [
       {
-        "img": "",
-        "name": "",
-        "url": "",
-        "description": ""
+        "img": "slay-the-slime.png",
+        "name": "Slay the slime !",
+        "url": "https://slay-the-slime-dev.voikyrioh.fr/",
+        "description": "Slay the slime est un clicker que j'ai commencé à réaliser suite à une discussion avec un amis à propos des possibilités des animations en CSS. J'ai commencer à réaliser ce jeu afin d'approfondir mes connaissances en CSS et de m'entraîner avec vue.js. Le projet est encore en cours."
+      },
+      {
+        "img": "in-stock.png",
+        "name": "inStock",
+        "url": "https://in-stock.voikyrioh.fr/",
+        "description": "inStock a été créé suite à la pénurie des cartes graphiques Nvidia (série des 3000) en 2020, après une discussion avec un ami sur l'utilisation de scrapping afin de récupérer chercher les informations sur plusieurs sites d'une possible remise en stock. J'ai suite à ça réalisé un site en React (ce qui m'a permis de me former à l'époque sur cette techno) et une API avec Fastify."
+      },
+      {
+        "img": "webgp-cube.png",
+        "name": "Web GPCube",
+        "url": "https://cube.voikyrioh.fr/",
+        "description": "Suite à l'annonce par google de WebGPU en fin 2023, j'ai commencé à travailler sur ce projet. L'objectif était de me former à WebGPU mais aussi aux bases de la programmation graphique et j'avais comme ambition de réaliser un moteur de jeu simple sans utiliser aucune librairie. Pour le moment cet application permet de se balader en caméra libre autour d'un \"chunk\" de 16x16x16 cubes dont j'ai optimisé l'affichage."
       }
     ],
     "en": [
       {
-        "img": "",
-        "name": "",
-        "url": "",
-        "description": ""
+        "img": "slay-the-slime.png",
+        "name": "Slay the slime !",
+        "url": "https://slay-the-slime-dev.voikyrioh.fr/",
+        "description": "Slay the slime is a clicker that I started to make when a friend and I talked about CSS animations possibilities with the animation API. I made this project for fun but also to train myself in vuejs and some high level CSS. This project is still ongoing"
+      },
+      {
+        "img": "in-stock.png",
+        "name": "inStock",
+        "url": "https://in-stock.voikyrioh.fr/",
+        "description": "inStock a été créé suite à la pénurie des cartes graphiques Nvidia (série des 3000) en 2020, après une discussion avec un ami sur l'utilisation de scrapping afin de récupérer chercher les informations sur plusieurs sites d'une possible remise en stock. J'ai suite à ça réalisé un site en React (ce qui m'a permis de me former à l'époque sur cette techno) et une API avec Fastify."
+      },
+      {
+        "img": "webgp-cube.png",
+        "name": "Web GPCube",
+        "url": "https://cube.voikyrioh.fr/",
+        "description": "Suite à l'annonce par google de WebGPU en fin 2023, j'ai commencé à travailler sur ce projet. L'objectif était de me former à WebGPU mais aussi aux bases de la programmation graphique et j'avais comme ambition de réaliser un moteur de jeu simple sans utiliser aucune librairie. Pour le moment cet application permet de se balader en caméra libre autour d'un \"chunk\" de 16x16x16 cubes dont j'ai optimisé l'affichage."
       }
     ]
   }

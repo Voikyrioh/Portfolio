@@ -1,4 +1,4 @@
-export interface PersonalProject {
+export interface PersonalProjectEntity {
     img: string,
     name: string,
     url: string,

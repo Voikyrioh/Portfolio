@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [vue()],
   assetsInclude: ['**/*.glb', '**/*.json'],
   root: './src/env/webview',
-  publicDir: 'public'
+  publicDir: 'public',
+  base: './'
 })

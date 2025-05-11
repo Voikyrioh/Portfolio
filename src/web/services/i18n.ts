@@ -1,7 +1,15 @@
+import {ref} from "vue";
+
+type lang = 'en' | 'fr';
+type country = 'GB' | 'FR';
+
 class I18n {
+    readonly availableLanguages = new Map<lang, country>([['en', 'GB'], ['fr', 'FR']]);
     #activeLanguage: string;
+    readonly languageRef = ref('')
     constructor(language: string = 'en') {
         this.#activeLanguage = language;
+        this.languageRef.value = this.#activeLanguage;
     };
 
     get activeLanguage(): string {
@@ -10,6 +18,7 @@ class I18n {
 
     set activeLanguage(value: string) {
         this.#activeLanguage = value;
+        this.languageRef.value = this.#activeLanguage;
     }
 
     async getDocument<T>(url: string): Promise<T> {
