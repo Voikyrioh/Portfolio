@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import "../styles/globals.css"
-import SiteTitle from "./components/site-title.vue";
-import Presentation from "./components/presentation.vue";
-import Projects from "./molecules/projects.vue";
+import "./styles/globals.css"
+import Home from "./pages/home/home.vue";
+import SiteTitle from "./structure/site-title.vue";
 </script>
+
 
 <template>
   <site-title></site-title>
-  <presentation></presentation>
-  <projects></projects>
+  <home></home>
+
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LanguageSelector from "./language-selector.vue";
+import LanguageSelector from "./components/language-selector.vue";
 </script>
 
 <template>

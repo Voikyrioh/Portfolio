@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
-import file from "../../../public/presentation.json?url";
-import type { Presentation } from "../models/presentation.ts";
-import I18n from "../services/i18n.ts";
+import file from "../../../../../public/presentation.json?url";
+import type { PresentationEntity } from "../entities/presentationEntity.ts";
+import I18n from "../../../shared/services/i18n.ts";
 
   const text = ref('');
   onMounted(async () => {
-    text.value = (await I18n.getDocument<Presentation>(file)).text;
+    text.value = (await I18n.getDocument<PresentationEntity>(file)).text;
   });
-  watch(I18n.languageRef, async () => { text.value = (await I18n.getDocument<Presentation>(file)).text; })
+  watch(I18n.languageRef, async () => { text.value = (await I18n.getDocument<PresentationEntity>(file)).text; })
 </script>
 
 <template>

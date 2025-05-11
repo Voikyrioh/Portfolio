@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CustomButton from "../components/inputs/custom-button.vue";
-import CustomInput from "../components/inputs/custom-input.vue";
+import CustomButton from "../inputs/custom-button.vue";
+import CustomInput from "../inputs/custom-input.vue";
 import {ref} from "vue";
 
 const isInputOnError = ref(false);

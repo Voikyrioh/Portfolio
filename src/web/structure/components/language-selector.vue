@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import I18n from "../services/i18n.ts";
+import I18n from "../../shared/services/i18n.ts";
 import {ref} from "vue";
 
 function switchLanguage(lang: string) {

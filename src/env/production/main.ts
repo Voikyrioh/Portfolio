@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import '../../styles/style.css'
+import '../../web/styles/style.css'
 import App from '../../web/App.vue'
 import {GameBuilder, GameType} from "../../app/game-builder.ts";
 

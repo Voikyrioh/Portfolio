@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type {PersonalProjectEntity} from "../models/personal-project-entity.ts";
-import CustomButton from "./inputs/custom-button.vue";
+import type {PersonalProjectEntity} from "../entities/personal-project-entity.ts";
+import CustomButton from "../../../shared/inputs/custom-button.vue";
 import {computed} from "vue";
 
 const {project, align} = defineProps<{align: 'left' | 'right', project: PersonalProjectEntity}>()
@@ -10,7 +10,7 @@ function navigateUrl() {
 
 const alignProject = computed(() => align === "right" ? 'row' : 'row-reverse');
 const imageCrop = computed(() => align === "right" ? 'polygon(0 0, 100% 0, 100% 100%, 200px 100%)' : 'polygon(0 0, 100% 0, calc(100% - 200px) 100%, 0 100%)');
-const imgUrl = computed(() => {return new URL(`../assets/medias/projects/${project.img}`, import.meta.url).href;})
+const imgUrl = computed(() => {return new URL(`../../../assets/medias/projects/${project.img}`, import.meta.url).href;})
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
-import url from "../../../public/personal-projects.json?url";
-import I18n from "../services/i18n.ts";
-import type {PersonalProjectEntity} from "../models/personal-project-entity.ts";
-import PersonalProject from "../components/personal-project.vue";
+import url from "../../../../../public/personal-projects.json?url";
+import I18n from "../../../shared/services/i18n.ts";
+import type {PersonalProjectEntity} from "../entities/personal-project-entity.ts";
+import PersonalProject from "./personal-project.vue";
 
 const projects = ref<PersonalProjectEntity[]>([]);
 onMounted(async () => {

@@ -1,4 +1,4 @@
-export default interface Experience {
+export default interface ExperienceEntity {
     company: string,
     post: string,
     start_date: Date,
