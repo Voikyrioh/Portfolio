@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import {onMounted, ref, watch} from "vue";
-import file from "../../../assets/translations/pages/home/presentation.json?url";
-import type { PresentationEntity } from "../entities/presentationEntity.ts";
-import I18n from "../../../shared/services/i18n.ts";
+import type {TranslationFile} from "../../../shared/services/translation-file.ts";
 
-  const text = ref('');
-  onMounted(async () => {
-    text.value = (await I18n.getDocument<PresentationEntity>(file)).text;
-  });
-  watch(I18n.languageRef, async () => { text.value = (await I18n.getDocument<PresentationEntity>(file)).text; })
+const { translations } = defineProps<{translations: TranslationFile | undefined}>()
 </script>
 
 <template>
   <div class="presentation">
-    <p>{{text}}</p>
+    <p>{{translations?.get('PRESENTATION')}}</p>
   </div>
 </template>
 

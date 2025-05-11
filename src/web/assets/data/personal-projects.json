@@ -1,0 +1,20 @@
+[
+    {
+      "img": "slay-the-slime.png",
+      "name": "Slay the slime !",
+      "url": "https://slay-the-slime-dev.voikyrioh.fr/",
+      "description": "SLIME"
+    },
+    {
+      "img": "in-stock.png",
+      "name": "inStock",
+      "url": "https://in-stock.voikyrioh.fr/",
+      "description": "IN_STOCK"
+    },
+    {
+      "img": "webgp-cube.png",
+      "name": "Web GPCube",
+      "url": "https://cube.voikyrioh.fr/",
+      "description": "CUBE"
+    }
+]

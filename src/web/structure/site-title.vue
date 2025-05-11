@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import LanguageSelector from "./components/language-selector.vue";
+import type {TranslationFile} from "../shared/services/translation-file.ts";
+
+const { translations } = defineProps<{ translations: TranslationFile|undefined }>();
 </script>
 
 <template>
   <div class="site-title">
     <h1>Voikyrioh.fr</h1>
-    <language-selector></language-selector>
+    <language-selector :translations="translations"></language-selector>
   </div>
 </template>
 

@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
-import url from "../../../assets/translations/pages/home/personal-projects.json?url";
+import projectsData from "../../../assets/data/personal-projects.json?url";
 import I18n from "../../../shared/services/i18n.ts";
-import type {PersonalProjectEntity} from "../entities/personal-project-entity.ts";
+import { type PersonalProjectEntity, validatePersonalProjects } from "../entities/personal-project-entity.ts";
 import PersonalProject from "./personal-project.vue";
+import type {TranslationFile} from "../../../shared/services/translation-file.ts";
 
+const { translations } = defineProps<{translations: TranslationFile | undefined}>();
 const projects = ref<PersonalProjectEntity[]>([]);
 onMounted(async () => {
-  projects.value = await I18n.getDocument<PersonalProjectEntity[]>(url)
+    projects.value = await fetch(projectsData).then((response) => response.json()).then(validatePersonalProjects)
 })
 watch(I18n.languageRef, async () => (
-    projects.value = await I18n.getDocument<PersonalProjectEntity[]>(url)
+    projects.value = await fetch(projectsData).then((response) => response.json()).then(validatePersonalProjects)
 ))
 function alternateAlign(index: number): 'left'|'right' {
   return index % 2 === 0 ? 'right' : 'left';
@@ -18,7 +20,7 @@ function alternateAlign(index: number): 'left'|'right' {
 </script>
 
 <template>
-  <personal-project v-for="(project, index) in projects" v-bind:align="alternateAlign(index)" v-bind:project="project"></personal-project>
+  <personal-project v-for="(project, index) in projects" v-bind:align="alternateAlign(index)" v-bind:project="project" :translations="translations"></personal-project>
 </template>
 
 <style scoped>

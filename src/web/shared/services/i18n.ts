@@ -1,4 +1,5 @@
 import {ref} from "vue";
+import {TranslationFile} from "./translation-file.ts";
 
 type lang = 'en' | 'fr';
 type country = 'GB' | 'FR';
@@ -21,12 +22,14 @@ class I18n {
         this.languageRef.value = this.#activeLanguage;
     }
 
-    async getDocument<T>(url: string): Promise<T> {
+    async getDocument(url: string): Promise<TranslationFile> {
         const data = await fetch( url ).then((response) => response.json()).catch((err) => {
-            console.log(err);
+            console.error(err);
             throw new Error('could not load file');
         });
-       if (data.language && data.language[this.#activeLanguage]) return data.language[this.#activeLanguage] as T;
+        if (data && data[this.#activeLanguage]) {
+           return new TranslationFile(this.#activeLanguage, data[this.#activeLanguage] as Record<string, string>);
+       }
        else throw new Error('Language not found');
     }
 }
