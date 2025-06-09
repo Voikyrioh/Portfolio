@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {onMounted, ref, watch} from "vue";
 import projectsData from "../../../assets/data/personal-projects.json?url";
-import I18n from "../../../shared/services/i18n.ts";
+import I18n from "../../../services/i18n.ts";
 import { type PersonalProjectEntity, validatePersonalProjects } from "../entities/personal-project-entity.ts";
 import PersonalProject from "./personal-project.vue";
-import type {TranslationFile} from "../../../shared/services/translation-file.ts";
+import type {TranslationFile} from "../../../services/translation-file.ts";
 
 const { translations } = defineProps<{translations: TranslationFile | undefined}>();
 const projects = ref<PersonalProjectEntity[]>([]);

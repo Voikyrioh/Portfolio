@@ -11,11 +11,11 @@ const props = defineProps<{text: string}>();
 button {
   position: relative;
   background-color: var(--bg-default);
-  padding: 8px;
+  padding: 16px;
   border-radius: var(--border-default-radius);
   border: var(--border-default);
   color: var(--text-primary);
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
   text-transform: uppercase;
   transition: var(--transition-default);
@@ -29,7 +29,7 @@ button {
     background-color:  var(--bg-alt);
     border-color:  var(--border-primary);
     color: var(--text-accent);
-    transform: translateY(8px);
+    transform: translateY(16px);
   }
 }
 button::before {
@@ -37,10 +37,10 @@ button::before {
   z-index: 2;
   content: '';
   border: var(--border-default);
-  padding-bottom: 8px;
+  padding-bottom: 16px;
   width: calc(100% + 1px);
   height: 100%;
-  transform: translate(-9px, -9px);
+  transform: translate(-17px, -17px);
   border-radius: var(--border-default-radius);
   transition: all 0.2s ease-in-out;
 }

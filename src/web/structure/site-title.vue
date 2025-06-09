@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import LanguageSelector from "./components/language-selector.vue";
-import type {TranslationFile} from "../shared/services/translation-file.ts";
+import type {TranslationFile} from "../services/translation-file.ts";
 
 const { translations } = defineProps<{ translations: TranslationFile|undefined }>();
 </script>

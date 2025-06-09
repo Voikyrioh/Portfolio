@@ -8,6 +8,10 @@
     --bg-contrast: #111;
     --bg-alt: #ccc;
 
+    /* === Code balises formating === */
+    --text-code: #ffa541;
+    --bg-code: #4f4f4f;
+
     /* === Status colors === */
     --error: #ff2536;
 

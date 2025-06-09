@@ -2,9 +2,9 @@
 import Projects from "./components/projects.vue";
 import Presentation from "./components/presentation.vue";
 import {onMounted, ref, watch} from "vue";
-import I18n from "../../shared/services/i18n.ts";
+import I18n from "../../services/i18n.ts";
 import translationsUrl from "../../assets/translations/pages/home/translations.json?url"
-import type {TranslationFile} from "../../shared/services/translation-file.ts";
+import type {TranslationFile} from "../../services/translation-file.ts";
 
 
 const translations = ref<TranslationFile>();

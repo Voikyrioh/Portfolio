@@ -16,5 +16,11 @@
       "name": "Web GPCube",
       "url": "https://cube.voikyrioh.fr/",
       "description": "CUBE"
+    },
+    {
+      "img": "my-chess.png",
+      "name": "My chess Game",
+      "url": "https://chess.voikyrioh.fr/",
+      "description": "CHESS"
     }
 ]

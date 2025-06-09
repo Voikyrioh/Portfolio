@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import I18n from "../../shared/services/i18n.ts";
+import I18n from "../../services/i18n.ts";
 import {ref} from "vue";
-import type {TranslationFile} from "../../shared/services/translation-file.ts";
+import type {TranslationFile} from "../../services/translation-file.ts";
 
 const { translations } = defineProps<{translations: TranslationFile | undefined}>();
 
